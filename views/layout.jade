@@ -2,7 +2,17 @@ doctype html
 html
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')    
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')    
     link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')    
+    link(rel='stylesheet', href='/stylesheets/landing-page.css')
   body
+    if (error && error.length > 0)
+      br
+      h4.error-msg= error
+      br
+    
     block content
+
+ script(src='/bower_components/jquery/dist/jquery.js')
+ script(src='/bower_components/bootstrap/dist/js/bootstrap.js')

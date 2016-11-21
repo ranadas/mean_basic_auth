@@ -1,3 +1,6 @@
+A MEAN stack application.
+expects mongo running @ localhost.
+
 1. npm install -g express-generator@4
 2. express passport-local-express4
 3. copy back the file to current 
