@@ -1,5 +1,6 @@
 A MEAN stack application.
 expects mongo running @ localhost.
+Inspired by : http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4
 
 1. npm install -g express-generator@4
 2. express passport-local-express4
@@ -12,6 +13,8 @@ expects mongo running @ localhost.
 7. http://html2jade.org/
 8.  npm install nodemon --save-dev
     node_modules\.bin\nodemon.cmd .\bin\www
+
+	npm run dev
 9. Add passport & mongo/mongoose
 	[https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications]
 	* add require mongoose passport, and local strategy
@@ -58,4 +61,6 @@ expects mongo running @ localhost.
 	npm test 	
 
 13. add a test file in test foler. 
+
+
 TODO : CONVERT THIS TO TYPESCRIPT http://brianflove.com/2016/03/29/typescript-express-node-js/
