@@ -1,0 +1,20 @@
+{
+  "name": "basic_aut",
+  "description": "Express basic_aut Project",
+  "authors": [
+    "Rana Das"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
