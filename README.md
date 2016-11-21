@@ -53,4 +53,9 @@ expects mongo running @ localhost.
 	
 	* Use Account in services to register , authenticate etc.
 10. Using wonderful promise library  : Bluebird. http://stackoverflow.com/questions/6180896/how-to-return-mongoose-results-from-the-find-method
-22. http://stackoverflow.com/questions/7419969/how-do-i-define-methods-in-a-mongoose-model	
+11. http://stackoverflow.com/questions/7419969/how-do-i-define-methods-in-a-mongoose-model
+12. add the text in text folder. and run 
+	npm test 	
+
+13. add a test file in test foler. 
+TODO : CONVERT THIS TO TYPESCRIPT http://brianflove.com/2016/03/29/typescript-express-node-js/
