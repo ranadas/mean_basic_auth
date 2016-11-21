@@ -1,6 +1,7 @@
 A MEAN stack application.
 expects mongo running @ localhost.
 Inspired by : http://mherman.org/blog/2015/01/31/local-authentication-with-passport-and-express-4
+also read: https://blog.risingstack.com/node-hero-node-js-authentication-passport-js/
 
 1. npm install -g express-generator@4
 2. express passport-local-express4

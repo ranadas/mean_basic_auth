@@ -37,9 +37,13 @@ app.use(passport.session());
 
 app.use(express.static(path.join(__dirname, 'public')));
 // TODO 1. move out of jade, when  all done. . 
-//app.use('htmls/', express.static(path.join(__dirname, 'htmls')));
+app.use('htmls/', express.static(path.join(__dirname, 'htmls')));
+app.get('/', function(req, res) {
+    res.sendfile('./htmls/index.html'); // load the single view file (angular will handle the page changes on the front-end)
+});
 
-app.use('/', index);
+//TODO 2: comment the line below for hiding jade 
+//app.use('/', index); 
 app.use('/users', users);
 app.use('/ping', ping_service);
 
