@@ -9,4 +9,4 @@ expects mongo running @ localhost.
 6.  npm install chai mocha should --save
     npm install mongoose passport passport-local passport-local-mongoose  --save
     npm install connect-flash express-session  --save
-7.
+7. http://html2jade.org/
