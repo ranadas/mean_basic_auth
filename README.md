@@ -12,4 +12,45 @@ expects mongo running @ localhost.
 7. http://html2jade.org/
 8.  npm install nodemon --save-dev
     node_modules\.bin\nodemon.cmd .\bin\www
-9.
+9. Add passport & mongo/mongoose
+	[https://scotch.io/tutorials/using-mongoosejs-in-node-js-and-mongodb-applications]
+	* add require mongoose passport, and local strategy
+		var mongoose = require('mongoose');
+		var passport = require('passport');
+		var LocalStrategy = require('passport-local').Strategy;
+		
+	* add session handling and passport initialise
+		app.use(require('express-session')({
+				secret: 'keyboard cat',
+				resave: false,
+				saveUninitialized: false
+		}));
+		app.use(passport.initialize());
+		app.use(passport.session());
+	
+	* configure passport and add serialiser 
+		var Account = require('./models/account');
+		passport.use(new LocalStrategy(Account.authenticate()));
+		passport.serializeUser(Account.serializeUser());
+		passport.deserializeUser(Account.deserializeUser());
+
+	* mongoose
+		mongoose.connect('mongodb://localhost/passport_local_mongoose_express4');
+
+	* add account.js as required.	
+		const mongoose = require('mongoose');
+		const Schema = mongoose.Schema;
+		const passportLocalMongoose = require('passport-local-mongoose');
+
+		const Account = new Schema({
+			username: String,
+			password: String
+		});
+
+		Account.plugin(passportLocalMongoose);
+
+		module.exports = mongoose.model('accounts', Account);
+	
+	* Use Account in services to register , authenticate etc.
+10. Using wonderful promise library  : Bluebird. http://stackoverflow.com/questions/6180896/how-to-return-mongoose-results-from-the-find-method
+22. http://stackoverflow.com/questions/7419969/how-do-i-define-methods-in-a-mongoose-model	
