@@ -10,3 +10,6 @@ expects mongo running @ localhost.
     npm install mongoose passport passport-local passport-local-mongoose  --save
     npm install connect-flash express-session  --save
 7. http://html2jade.org/
+8.  npm install nodemon --save-dev
+    node_modules\.bin\nodemon.cmd .\bin\www
+9.
