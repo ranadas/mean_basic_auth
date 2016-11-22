@@ -10,8 +10,8 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
-var index = require('./routes/index');
-var users = require('./routes/users');
+var index = require('./routes/index-service');
+var users = require('./routes/user-service');
 var ping_service = require('./routes/ping-service');
 
 var app = express();
